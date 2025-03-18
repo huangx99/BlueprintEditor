@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="01字典">
+      <UniqueIdentifier>{6d5c7b45-57d3-4edf-b441-acc987f2c08a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02数据结构">
+      <UniqueIdentifier>{81445d76-430e-45fa-982c-7f582e08ab66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03接口">
+      <UniqueIdentifier>{b0ace8cc-dd70-44ee-b472-bac14af93977}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04算法">
+      <UniqueIdentifier>{4d75415c-fa9e-49c3-9dc4-9a9a3a8d0855}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05界面">
+      <UniqueIdentifier>{d4bdd024-f605-4e5c-b2bb-5d4cde1690e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06服务">
+      <UniqueIdentifier>{2c8ea4c8-99f9-44b8-b358-74538f5add07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源">
+      <UniqueIdentifier>{4700aa67-ab31-43f6-80cf-07402dae35c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05界面\主界面">
+      <UniqueIdentifier>{fb46bf0e-3b9c-441b-a2de-715ab666e43a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="入口">
+      <UniqueIdentifier>{25381d82-bfcd-4419-b88b-61097582b825}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01字典\枚举">
+      <UniqueIdentifier>{2ef6a4e3-7e06-4b7e-a3db-b4f21757091b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01字典\枚举翻译器">
+      <UniqueIdentifier>{b364e546-46ce-4306-a540-28df40cb918f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03接口\a界面接口">
+      <UniqueIdentifier>{7b793b9b-6db6-4ad0-8fff-4a394ccd2ac6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03接口\b数据接口">
+      <UniqueIdentifier>{bd8a3e87-af4b-4e62-9b7d-b88d7480cf12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05界面\数值编辑器">
+      <UniqueIdentifier>{0c7d78c0-47b7-47f7-9cf2-b99ed67b7091}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05界面\数值编辑器\文本编辑器">
+      <UniqueIdentifier>{e4855d76-714f-48ec-9f7d-78e647e3f17e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="07工厂">
+      <UniqueIdentifier>{d7dde314-3374-4520-9e03-4171c95300cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="07工厂\数值编辑器工厂">
+      <UniqueIdentifier>{9ec59906-2602-496a-b590-ff36bc6ff875}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05界面\数值编辑器\整型数值编辑器">
+      <UniqueIdentifier>{df00a074-958e-4c19-b112-86a118d67acf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05界面\自动构造器">
+      <UniqueIdentifier>{9d95f86b-b6a4-4195-aebe-0782a9759d1e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="widget\BlueprintEditor.cpp">
+      <Filter>05界面\主界面</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>入口</Filter>
+    </ClCompile>
+    <ClCompile Include="widget\BPTextEditor.cpp">
+      <Filter>05界面\数值编辑器\文本编辑器</Filter>
+    </ClCompile>
+    <ClCompile Include="factory\BPValueEditorFactory.cpp">
+      <Filter>07工厂\数值编辑器工厂</Filter>
+    </ClCompile>
+    <ClCompile Include="widget\BPIntEditor.cpp">
+      <Filter>05界面\数值编辑器\整型数值编辑器</Filter>
+    </ClCompile>
+    <ClCompile Include="widget\BPAutoValueEditor.cpp">
+      <Filter>05界面\自动构造器</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="widget\BlueprintEditor.h">
+      <Filter>05界面\主界面</Filter>
+    </QtMoc>
+    <QtMoc Include="interface\if_widget_value_editor.h">
+      <Filter>03接口\a界面接口</Filter>
+    </QtMoc>
+    <QtMoc Include="widget\BPTextEditor.h">
+      <Filter>05界面\数值编辑器\文本编辑器</Filter>
+    </QtMoc>
+    <QtMoc Include="widget\BPIntEditor.h">
+      <Filter>05界面\数值编辑器\整型数值编辑器</Filter>
+    </QtMoc>
+    <QtMoc Include="widget\BPAutoValueEditor.h">
+      <Filter>05界面\自动构造器</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="widget\BlueprintEditor.ui">
+      <Filter>05界面\主界面</Filter>
+    </QtUic>
+    <QtUic Include="widget\BPTextEditor.ui">
+      <Filter>05界面\数值编辑器\文本编辑器</Filter>
+    </QtUic>
+    <QtUic Include="widget\BPIntEditor.ui">
+      <Filter>05界面\数值编辑器\整型数值编辑器</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="BlueprintEditor.qrc">
+      <Filter>资源</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="factory\BPValueEditorFactory.h">
+      <Filter>07工厂\数值编辑器工厂</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
