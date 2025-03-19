@@ -2,9 +2,11 @@
 
 #include <QtWidgets/QMainWindow>
 #include <QDockWidget>
+#include <QPushButton>
 #include "ui_BlueprintEditor.h"
 #include "factory/BPValueEditorFactory.h"
 #include "BPAutoValueEditor.h"
+#include "struct\BlueprintConfig.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class BlueprintEditorClass; };
@@ -23,4 +25,7 @@ private:
 
     QDockWidget* dockWidget;
     BPAutoValueEditor* editor;
+    QPushButton* save;
+
+    ClassInfo m_classInfo;
 };

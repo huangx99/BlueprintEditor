@@ -78,6 +78,12 @@
     <ClCompile Include="widget\BPAutoValueEditor.cpp">
       <Filter>05界面\自动构造器</Filter>
     </ClCompile>
+    <ClCompile Include="struct\BlueprintConfig.cpp">
+      <Filter>02数据结构</Filter>
+    </ClCompile>
+    <ClCompile Include="dictionary\BlueprintDictionary.cpp">
+      <Filter>01字典\枚举</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="widget\BlueprintEditor.h">
@@ -115,6 +121,12 @@
   <ItemGroup>
     <ClInclude Include="factory\BPValueEditorFactory.h">
       <Filter>07工厂\数值编辑器工厂</Filter>
+    </ClInclude>
+    <ClInclude Include="dictionary\BlueprintDictionary.h">
+      <Filter>01字典\枚举</Filter>
+    </ClInclude>
+    <ClInclude Include="struct\BlueprintConfig.h">
+      <Filter>02数据结构</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,26 +1,7 @@
 #include "BlueprintEditor.h"
-#include <rttr\registration.h>
 #include "BPTextEditor.h"
 #include "factory\BPValueEditorFactory.h"
-using namespace rttr;
-#define REGISTRATION RTTR_REGISTRATION
 
-class MyClass {
-public:
-    MyClass() : x(10), y(20) {}
-
-    int x;
-    int y;
-    std::string name;
-};
-REGISTRATION
-{
-    registration::class_<MyClass>("MyClass")
-        .constructor<>()
-        .property("x", &MyClass::x)(metadata("disc", "xÖá"),metadata("edit", "BPIntEditor"))
-        .property("y", &MyClass::y)( metadata("disc", "yÖá"),metadata("edit", "BPIntEditor"))
-        .property("name", &MyClass::name)(metadata("disc", "×ø±êÏµÃû³Æ"), metadata("edit", "BPTextEditor"));
-}
 BlueprintEditor::BlueprintEditor(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::BlueprintEditorClass())
@@ -28,8 +9,19 @@ BlueprintEditor::BlueprintEditor(QWidget *parent)
 {
     ui->setupUi(this);
 
-    MyClass mc;
-    editor->setObject(mc);
+    VariableInfo info;
+    m_classInfo.memberVariables.push_back(info);
+    
+    auto dockWidget1 = new QDockWidget("AutoEditor", this);
+    save = new QPushButton("save", dockWidget1);
+    dockWidget1->setWidget(save);
+    addDockWidget(Qt::RightDockWidgetArea, dockWidget1);
+    connect(save, &QPushButton::clicked, this, [this](bool clicked) {
+        VariableInfo info1 = m_classInfo.memberVariables[0];
+        int i = 0;
+    });
+    
+    editor->setObject(m_classInfo.memberVariables[0]);
 
 
     dockWidget->setWidget(editor);

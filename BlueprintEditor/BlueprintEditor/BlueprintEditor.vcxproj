@@ -11,8 +11,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="dictionary\BlueprintDictionary.cpp" />
     <ClCompile Include="factory\BPValueEditorFactory.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="struct\BlueprintConfig.cpp" />
     <ClCompile Include="widget\BlueprintEditor.cpp" />
     <ClCompile Include="widget\BPAutoValueEditor.cpp">
       <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">input</DynamicSource>
@@ -41,7 +43,9 @@
     <QtMoc Include="widget\BPTextEditor.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="dictionary\BlueprintDictionary.h" />
     <ClInclude Include="factory\BPValueEditorFactory.h" />
+    <ClInclude Include="struct\BlueprintConfig.h" />
     <QtMoc Include="widget\BPAutoValueEditor.h" />
     <QtMoc Include="widget\BPIntEditor.h" />
   </ItemGroup>
