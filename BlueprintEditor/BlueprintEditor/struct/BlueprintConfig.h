@@ -5,6 +5,23 @@
 #include "dictionary\BlueprintDictionary.h"
 using String = std::string;
 
+struct TestClass2
+{
+    int a;
+    int b;
+    String c;
+};
+
+struct TestClass
+{
+    int a;
+    int b;
+    String c;
+
+    TestClass2 class2;
+};
+
+
 // 变量信息（成员变量）
 struct VariableInfo
 {
@@ -14,6 +31,7 @@ struct VariableInfo
     bool isPointer = false;                // 是否是指针
     std::string defaultValue;      // 默认值（可选）
     VariableSetType setType = VST_single; //数值类型
+    TestClass ttt;
 };
 
 

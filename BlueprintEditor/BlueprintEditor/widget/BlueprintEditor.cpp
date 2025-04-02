@@ -5,7 +5,7 @@
 BlueprintEditor::BlueprintEditor(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::BlueprintEditorClass())
-    , dockWidget(new QDockWidget("AutoEditor", this)), editor(new BPAutoValueEditor(dockWidget))
+    , dockWidget(new QDockWidget("AutoEditor", this))
 {
     ui->setupUi(this);
 
@@ -20,6 +20,8 @@ BlueprintEditor::BlueprintEditor(QWidget *parent)
         VariableInfo info1 = m_classInfo.memberVariables[0];
         int i = 0;
     });
+
+    editor = new BPAutoValueEditor(m_classInfo.memberVariables[0], dockWidget);
     
     editor->setObject(m_classInfo.memberVariables[0]);
 

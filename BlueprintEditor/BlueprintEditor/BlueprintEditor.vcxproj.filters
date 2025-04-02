@@ -63,9 +63,6 @@
     <ClCompile Include="widget\BlueprintEditor.cpp">
       <Filter>05界面\主界面</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>入口</Filter>
-    </ClCompile>
     <ClCompile Include="widget\BPTextEditor.cpp">
       <Filter>05界面\数值编辑器\文本编辑器</Filter>
     </ClCompile>
@@ -83,6 +80,9 @@
     </ClCompile>
     <ClCompile Include="dictionary\BlueprintDictionary.cpp">
       <Filter>01字典\枚举</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>入口</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
