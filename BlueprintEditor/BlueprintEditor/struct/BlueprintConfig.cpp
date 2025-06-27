@@ -7,7 +7,7 @@ RTTR_REGISTRATION
         .constructor<>()
         .property("accessSpecifier", &VariableInfo::accessSpecifier)(rttr::metadata("displayName","访问权限"), rttr::metadata("editor","BPEnumEditor"), rttr::metadata("enumList", std::map<int, std::string>{{1, "公开"},{0, "私有"},{2, "受保护"}}))
         .property("type", &VariableInfo::type)(rttr::metadata("displayName","数据类型"), rttr::metadata("editor","BPValueTypeEditor"))
-        .property("name", &VariableInfo::name)(rttr::metadata("displayName","变量名称"), rttr::metadata("editor","BPTextEditor"))
+        .property("name", &VariableInfo::name)(rttr::metadata("displayName","变量名称"), rttr::metadata("editor","BPTextEditor"), rttr::metadata("isArray",true))
         .property("isPointer", &VariableInfo::isPointer)(rttr::metadata("displayName","是否为指针"), rttr::metadata("editor","BPCheckEditor"))
         .property("defaultValue", &VariableInfo::defaultValue)(rttr::metadata("displayName","默认值"), rttr::metadata("editor","BPTextEditor"))
         .property("setType", &VariableInfo::setType)(rttr::metadata("displayName","数值类型"), rttr::metadata("editor","BPEnumEditor"), rttr::metadata("enumList", std::map<int, std::string>{{0, "单一"},{1, "数组"},{2, "集"}, {3, "映射"}}))
@@ -18,7 +18,7 @@ rttr::registration::class_<TestClass>("TestClass")(rttr::metadata("isCustomType"
 .constructor<>()(rttr::policy::ctor::as_object)
 .property("a", &TestClass::a)(rttr::metadata("displayName", "测试a"), rttr::metadata("editor", "BPValueTypeEditor"))
 .property("b", &TestClass::b)(rttr::metadata("displayName", "测试b"), rttr::metadata("editor", "BPValueTypeEditor"))
-.property("c", &TestClass::b)(rttr::metadata("displayName", "测试b"), rttr::metadata("editor", "BPValueTypeEditor"))
+.property("c", &TestClass::c)(rttr::metadata("displayName", "测试c"), rttr::metadata("editor", "BPTextEditor"))
 .property("class2", &TestClass::class2);
 
 rttr::registration::class_<TestClass2>("TestClass2")(rttr::metadata("isCustomType", true), rttr::metadata("className", "测试类2"))

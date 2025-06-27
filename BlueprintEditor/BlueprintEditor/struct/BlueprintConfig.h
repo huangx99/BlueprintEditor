@@ -9,7 +9,7 @@ struct TestClass2
 {
     int a;
     int b;
-    String c;
+    std::vector<String> c;
 };
 
 struct TestClass
@@ -17,7 +17,6 @@ struct TestClass
     int a;
     int b;
     String c;
-
     TestClass2 class2;
 };
 
@@ -31,7 +30,7 @@ struct VariableInfo
     bool isPointer = false;                // 是否是指针
     std::string defaultValue;      // 默认值（可选）
     VariableSetType setType = VST_single; //数值类型
-    TestClass ttt;
+   TestClass ttt;
 };
 
 

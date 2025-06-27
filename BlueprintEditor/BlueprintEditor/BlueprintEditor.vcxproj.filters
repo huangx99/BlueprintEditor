@@ -58,6 +58,15 @@
     <Filter Include="05界面\自动构造器">
       <UniqueIdentifier>{9d95f86b-b6a4-4195-aebe-0782a9759d1e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="05界面\数值编辑器\数组容器%28弃用%29">
+      <UniqueIdentifier>{dfdf49ac-200f-4ea0-920d-3226ba91a112}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05界面\数值编辑器\数组容器%28弃用%29\编辑表格">
+      <UniqueIdentifier>{322db91c-5c13-4a6c-9d9a-7e70cb6a6e91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05界面\数值编辑器\数组容器%28弃用%29\数组编辑界面">
+      <UniqueIdentifier>{47cf2827-0c39-4e17-92b8-4500fa5e17eb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="widget\BlueprintEditor.cpp">
@@ -84,6 +93,18 @@
     <ClCompile Include="main.cpp">
       <Filter>入口</Filter>
     </ClCompile>
+    <ClCompile Include="widget\BPArrayContainer.cpp">
+      <Filter>05界面\数值编辑器\数组容器%28弃用%29</Filter>
+    </ClCompile>
+    <ClCompile Include="widget\ContainerTable.cpp">
+      <Filter>05界面\数值编辑器\数组容器%28弃用%29\编辑表格</Filter>
+    </ClCompile>
+    <ClCompile Include="widget\BPArrayEditorWidget.cpp">
+      <Filter>05界面\数值编辑器\数组容器%28弃用%29\数组编辑界面</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithm\BPClassParser.cpp">
+      <Filter>04算法</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="widget\BlueprintEditor.h">
@@ -101,6 +122,15 @@
     <QtMoc Include="widget\BPAutoValueEditor.h">
       <Filter>05界面\自动构造器</Filter>
     </QtMoc>
+    <QtMoc Include="widget\BPArrayContainer.h">
+      <Filter>05界面\数值编辑器\数组容器%28弃用%29</Filter>
+    </QtMoc>
+    <QtMoc Include="widget\ContainerTable.h">
+      <Filter>05界面\数值编辑器\数组容器%28弃用%29\编辑表格</Filter>
+    </QtMoc>
+    <QtMoc Include="widget\BPArrayEditorWidget.h">
+      <Filter>05界面\数值编辑器\数组容器%28弃用%29\数组编辑界面</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="widget\BlueprintEditor.ui">
@@ -111,6 +141,9 @@
     </QtUic>
     <QtUic Include="widget\BPIntEditor.ui">
       <Filter>05界面\数值编辑器\整型数值编辑器</Filter>
+    </QtUic>
+    <QtUic Include="widget\BPArrayContainer.ui">
+      <Filter>05界面\数值编辑器\数组容器%28弃用%29</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>
@@ -127,6 +160,9 @@
     </ClInclude>
     <ClInclude Include="struct\BlueprintConfig.h">
       <Filter>02数据结构</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\BPClassParser.h">
+      <Filter>04算法</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

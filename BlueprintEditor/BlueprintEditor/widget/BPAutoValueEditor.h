@@ -11,11 +11,16 @@ public:
     
     explicit BPAutoValueEditor(rttr::instance obj, QWidget* parent = nullptr);
     void setObject(rttr::instance obj, QTreeWidgetItem* parent = nullptr);
-
+    rttr::instance& getObj();
 private:
     QTreeWidget* treeWidget;
     void setInnerClassValue(rttr::instance obj2, rttr::variant json_object, int c, int r);
     if_widget_value_editor* createEditor(const QString& EditorName, QTreeWidgetItem* item);
+
+    
+
+signals:
+    void dataChanged();
 
 private:
 

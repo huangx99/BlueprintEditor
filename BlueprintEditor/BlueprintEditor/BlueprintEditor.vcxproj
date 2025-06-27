@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Algorithm\BPClassParser.cpp" />
     <ClCompile Include="dictionary\BlueprintDictionary.cpp" />
     <ClCompile Include="factory\BPValueEditorFactory.cpp" />
     <ClCompile Include="main.cpp">
@@ -20,7 +21,9 @@
       <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).moc</QtMocFileName>
     </ClCompile>
     <ClCompile Include="struct\BlueprintConfig.cpp" />
+    <ClCompile Include="widget\BPArrayEditorWidget.cpp" />
     <ClCompile Include="widget\BlueprintEditor.cpp" />
+    <ClCompile Include="widget\BPArrayContainer.cpp" />
     <ClCompile Include="widget\BPAutoValueEditor.cpp">
       <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">input</DynamicSource>
       <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).moc</QtMocFileName>
@@ -29,12 +32,19 @@
     </ClCompile>
     <ClCompile Include="widget\BPIntEditor.cpp" />
     <ClCompile Include="widget\BPTextEditor.cpp" />
+    <ClCompile Include="widget\ContainerTable.cpp">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).moc</QtMocFileName>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).moc</QtMocFileName>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="widget\BlueprintEditor.h" />
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="widget\BlueprintEditor.ui" />
+    <QtUic Include="widget\BPArrayContainer.ui" />
     <QtUic Include="widget\BPIntEditor.ui" />
     <QtUic Include="widget\BPTextEditor.ui" />
   </ItemGroup>
@@ -48,9 +58,13 @@
     <QtMoc Include="widget\BPTextEditor.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Algorithm\BPClassParser.h" />
     <ClInclude Include="dictionary\BlueprintDictionary.h" />
     <ClInclude Include="factory\BPValueEditorFactory.h" />
     <ClInclude Include="struct\BlueprintConfig.h" />
+    <QtMoc Include="widget\BPArrayEditorWidget.h" />
+    <QtMoc Include="widget\BPArrayContainer.h" />
+    <QtMoc Include="widget\ContainerTable.h" />
     <QtMoc Include="widget\BPAutoValueEditor.h" />
     <QtMoc Include="widget\BPIntEditor.h" />
   </ItemGroup>

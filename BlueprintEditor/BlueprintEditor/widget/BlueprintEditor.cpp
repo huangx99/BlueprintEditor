@@ -1,6 +1,8 @@
 #include "BlueprintEditor.h"
 #include "BPTextEditor.h"
 #include "factory\BPValueEditorFactory.h"
+#include <widget\BPArrayContainer.h>
+#include <Algorithm\BPClassParser.h>
 
 BlueprintEditor::BlueprintEditor(QWidget *parent)
     : QMainWindow(parent)
@@ -25,9 +27,19 @@ BlueprintEditor::BlueprintEditor(QWidget *parent)
     
     editor->setObject(m_classInfo.memberVariables[0]);
 
+    BPClassParser bp(m_classInfo.memberVariables[0]);
 
     dockWidget->setWidget(editor);
     addDockWidget(Qt::RightDockWidgetArea, dockWidget);
+
+    {
+        auto dockWidgetTemp = new QDockWidget("dockWidgetTemp", this);
+        BPArrayContainer* container = new BPArrayContainer(dockWidgetTemp);
+        container->setEditor("BPTextEditor");
+        dockWidgetTemp->setWidget(container);
+        addDockWidget(Qt::RightDockWidgetArea, dockWidgetTemp);
+    }
+
 
 }
 

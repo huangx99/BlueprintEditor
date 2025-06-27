@@ -6,6 +6,7 @@
 #include "ui_BlueprintEditor.h"
 #include "factory/BPValueEditorFactory.h"
 #include "BPAutoValueEditor.h"
+#include "BPArrayContainer.h"
 #include "struct\BlueprintConfig.h"
 
 QT_BEGIN_NAMESPACE
@@ -26,6 +27,5 @@ private:
     QDockWidget* dockWidget;
     BPAutoValueEditor* editor;
     QPushButton* save;
-
     ClassInfo m_classInfo;
 };
